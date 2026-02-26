@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Road to 2k Booking",
+  title: "Canary Vouchers",
   description: "Micro SaaS de reservas con Next.js y Stripe",
 };
 
