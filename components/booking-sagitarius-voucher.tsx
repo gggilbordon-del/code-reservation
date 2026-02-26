@@ -71,7 +71,7 @@ export function BookingSagitariusVoucher() {
 
     if (voucherType === "regalo") {
       setRecipientName("Demo Recipient");
-      setGiftMessage("Te regalo una aventura en el mar para disfrutar cuando quieras.");
+      setGiftMessage("Prepárate para la adrenalina en las costas de Mogán.");
     }
 
     if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {

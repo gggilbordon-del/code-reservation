@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useSearchParams } from "next/navigation";
 import { CheckCircle2 } from "lucide-react";
 import { downloadElementAsPdf } from "@/lib/pdf";
 
@@ -26,22 +25,53 @@ function buildVoucherCode(prefix: string, seed?: string) {
   return `${prefix}-${base36.slice(0, 4).padEnd(4, "X")}`;
 }
 
+type SuccessQuery = {
+  tipo: string;
+  cantidad: number;
+  nombre: string;
+  email: string;
+  para: string;
+  mensaje: string;
+  servicio: string;
+  prefijo: string;
+  sessionId?: string;
+  simulated: boolean;
+};
+
 export default function RetirosExitoPage() {
-  const params = useSearchParams();
   const [code, setCode] = useState<string>("");
   const ticketRef = useRef<HTMLDivElement | null>(null);
   const didTriggerPdfRef = useRef(false);
+  const [query, setQuery] = useState<SuccessQuery>({
+    tipo: "Bono regalo",
+    cantidad: 1,
+    nombre: "Cliente",
+    email: "",
+    para: "",
+    mensaje: "",
+    servicio: "Bono abierto 2 noches - Zen Retreat Villas",
+    prefijo: "ZEN",
+    sessionId: undefined,
+    simulated: false,
+  });
 
-  const tipo = params.get("tipo") === "ticket_abierto" ? "Ticket abierto" : "Bono regalo";
-  const cantidad = Number(params.get("cantidad") || "1");
-  const nombre = params.get("nombre") || "Cliente";
-  const email = params.get("email") || "";
-  const para = params.get("para") || "";
-  const mensaje = params.get("mensaje") || "";
-  const servicio = params.get("servicio") || "Bono abierto 2 noches - Zen Retreat Villas";
-  const prefijo = params.get("prefijo") || "ZEN";
-  const sessionId = params.get("session_id") || undefined;
-  const simulated = params.get("simulated") === "1";
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    setQuery({
+      tipo: params.get("tipo") === "ticket_abierto" ? "Ticket abierto" : "Bono regalo",
+      cantidad: Number(params.get("cantidad") || "1"),
+      nombre: params.get("nombre") || "Cliente",
+      email: params.get("email") || "",
+      para: params.get("para") || "",
+      mensaje: params.get("mensaje") || "",
+      servicio: params.get("servicio") || "Bono abierto 2 noches - Zen Retreat Villas",
+      prefijo: params.get("prefijo") || "ZEN",
+      sessionId: params.get("session_id") || undefined,
+      simulated: params.get("simulated") === "1",
+    });
+  }, []);
+
+  const { tipo, cantidad, nombre, email, para, mensaje, servicio, prefijo, sessionId, simulated } = query;
 
   useEffect(() => {
     setCode(buildVoucherCode(prefijo, sessionId));

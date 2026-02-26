@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useSearchParams } from "next/navigation";
 import { CheckCircle2, Gift } from "lucide-react";
 import { downloadElementAsPdf } from "@/lib/pdf";
 
@@ -21,23 +20,56 @@ function buildVoucherCode(prefix: string, seed?: string) {
   return `${prefix}-${base36.slice(0, 4).padEnd(4, "X")}`;
 }
 
+type SuccessQuery = {
+  tipo: string;
+  cantidad: number;
+  nombre: string;
+  email: string;
+  para: string;
+  mensaje: string;
+  servicio: string;
+  prefijo: string;
+  phone: string;
+  sessionId?: string;
+  simulated: boolean;
+};
+
 export default function SagitariusExitoPage() {
-  const params = useSearchParams();
   const [code, setCode] = useState<string>("");
   const ticketRef = useRef<HTMLDivElement | null>(null);
   const didTriggerPdfRef = useRef(false);
+  const [query, setQuery] = useState<SuccessQuery>({
+    tipo: "Bono regalo",
+    cantidad: 1,
+    nombre: "Cliente",
+    email: "",
+    para: "",
+    mensaje: "",
+    servicio: "Experiencia de 30 minutos Motos de Agua / Zodiac",
+    prefijo: "SAGI",
+    phone: "639 61 90 29",
+    sessionId: undefined,
+    simulated: false,
+  });
 
-  const tipo = params.get("tipo") === "ticket_abierto" ? "Ticket abierto" : "Bono regalo";
-  const cantidad = Number(params.get("cantidad") || "1");
-  const nombre = params.get("nombre") || "Cliente";
-  const email = params.get("email") || "";
-  const para = params.get("para") || "";
-  const mensaje = params.get("mensaje") || "";
-  const servicio = params.get("servicio") || "Experiencia de 30 minutos Motos de Agua / Zodiac";
-  const prefijo = params.get("prefijo") || "SAGI";
-  const phone = params.get("phone") || "639 61 90 29";
-  const sessionId = params.get("session_id") || undefined;
-  const simulated = params.get("simulated") === "1";
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    setQuery({
+      tipo: params.get("tipo") === "ticket_abierto" ? "Ticket abierto" : "Bono regalo",
+      cantidad: Number(params.get("cantidad") || "1"),
+      nombre: params.get("nombre") || "Cliente",
+      email: params.get("email") || "",
+      para: params.get("para") || "",
+      mensaje: params.get("mensaje") || "",
+      servicio: params.get("servicio") || "Experiencia de 30 minutos Motos de Agua / Zodiac",
+      prefijo: params.get("prefijo") || "SAGI",
+      phone: params.get("phone") || "639 61 90 29",
+      sessionId: params.get("session_id") || undefined,
+      simulated: params.get("simulated") === "1",
+    });
+  }, []);
+
+  const { tipo, cantidad, nombre, email, para, mensaje, servicio, prefijo, phone, sessionId, simulated } = query;
   const isGift = tipo === "Bono regalo";
 
   useEffect(() => {
