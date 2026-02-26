@@ -45,7 +45,7 @@ export default function SagitariusExitoPage() {
     email: "",
     para: "",
     mensaje: "",
-    servicio: "Experiencia de 30 minutos Motos de Agua / Zodiac",
+    servicio: "Paseos en Barco, Zodiac, Parascending y Motos de agua",
     prefijo: "SAGI",
     phone: "639 61 90 29",
     sessionId: undefined,
@@ -61,7 +61,7 @@ export default function SagitariusExitoPage() {
       email: params.get("email") || "",
       para: params.get("para") || "",
       mensaje: params.get("mensaje") || "",
-      servicio: params.get("servicio") || "Experiencia de 30 minutos Motos de Agua / Zodiac",
+      servicio: params.get("servicio") || "Paseos en Barco, Zodiac, Parascending y Motos de agua",
       prefijo: params.get("prefijo") || "SAGI",
       phone: params.get("phone") || "639 61 90 29",
       sessionId: params.get("session_id") || undefined,
@@ -114,7 +114,7 @@ export default function SagitariusExitoPage() {
                 <p className="text-xs font-semibold uppercase tracking-[0.2em]">Tarjeta regalo</p>
               </div>
               <p className="mt-2 text-2xl font-bold">Aventura Sagitarius Star</p>
-              <p className="text-cyan-100">Motos de Agua / Zodiac</p>
+              <p className="text-cyan-100">Paseos en Barco, Zodiac, Parascending y Motos de agua</p>
             </div>
             <div className="bg-white p-5">
               <p className="text-xs uppercase tracking-wide text-cyan-700">Para</p>

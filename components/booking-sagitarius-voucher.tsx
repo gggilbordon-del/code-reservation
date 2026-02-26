@@ -24,11 +24,11 @@ type EmpresaConfig = {
 
 const CONFIG_EMPRESA: EmpresaConfig = {
   nombreComercial: "Aventura Sagitarius Star",
-  subtitulo: "Bonos digitales para Motos de Agua y Zodiac",
+  subtitulo: "Bonos digitales para Paseos en Barco, Zodiac, Parascending y Motos de agua",
   etiqueta: "Gran Canaria Water Adventures",
-  claim: "Vende experiencias acuaticas en venta directa",
+  claim: "Vende experiencias acuaticas top en venta directa",
   descripcion: "Checkout rapido, ticket digital y canje flexible para tus clientes.",
-  servicioEstrella: "Experiencia de 30 minutos Motos de Agua / Zodiac",
+  servicioEstrella: "Paseos en Barco, Zodiac, Parascending y Motos de agua",
   prefijoCodigo: "SAGI",
   precioBono: 149,
   validezMeses: 12,
@@ -71,7 +71,7 @@ export function BookingSagitariusVoucher() {
 
     if (voucherType === "regalo") {
       setRecipientName("Demo Recipient");
-      setGiftMessage("Prepárate para la adrenalina en las costas de Mogán.");
+      setGiftMessage("Prepárate para la adrenalina en las costas de Puerto Rico, en Gran Canaria.");
     }
 
     if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
@@ -193,7 +193,7 @@ export function BookingSagitariusVoucher() {
                   <Gift className="h-4 w-4" />
                   <p className="font-semibold">Bono regalo</p>
                 </div>
-                <p className="mt-1 text-sm text-slate-600">Ideal para regalar una aventura acuática.</p>
+                <p className="mt-1 text-sm text-slate-600">Ideal para regalar paseos en barco, parascending o motos de agua.</p>
               </button>
 
               <button
@@ -209,7 +209,7 @@ export function BookingSagitariusVoucher() {
                   <Ticket className="h-4 w-4" />
                   <p className="font-semibold">Ticket abierto</p>
                 </div>
-                <p className="mt-1 text-sm text-slate-600">Compra hoy y canjea la experiencia más adelante.</p>
+                <p className="mt-1 text-sm text-slate-600">Compra hoy y elige luego entre barco, zodiac, parascending o motos de agua.</p>
               </button>
             </div>
 

@@ -16,7 +16,7 @@ type Body = {
 };
 
 const BONO_PRICE_EUR = 149;
-const SERVICE_NAME = "Experiencia de 30 minutos Motos de Agua / Zodiac";
+const SERVICE_NAME = "Paseos en Barco, Zodiac, Parascending y Motos de agua";
 const COMPANY_PREFIX = "SAGI";
 const COMPANY_PHONE = "639 61 90 29";
 
