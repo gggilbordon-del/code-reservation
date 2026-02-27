@@ -72,7 +72,7 @@ export function BookingEcoTaraVoucher() {
 
     if (voucherType === "regalo") {
       setRecipientName("Demo Recipient");
-      setGiftMessage("Te regalo un dia de calma, yoga y reconexion.");
+      setGiftMessage("Te regalo un día de calma, yoga y reconexión en Fataga.");
     }
 
     if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {

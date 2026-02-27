@@ -117,7 +117,7 @@ export default function EcoTaraExitoPage() {
                     <p className="text-xs font-semibold uppercase tracking-[0.2em]">Tarjeta regalo wellness</p>
                   </div>
                   <p className="mt-2 font-serif text-2xl font-bold">EcoTara Wellness Retreat</p>
-                  <p className="text-green-100">Dia de Retiro & Yoga</p>
+                  <p className="text-green-100">Día de Retiro & Yoga en Gran Canaria</p>
                 </div>
                 <img
                   src={ecotaraLogo.src}
@@ -132,7 +132,7 @@ export default function EcoTaraExitoPage() {
               {mensaje ? <p className="mt-2 rounded-xl bg-[#fdf6e3] p-3 text-sm text-slate-700">&quot;{mensaje}&quot;</p> : null}
               <div className="mt-3 grid grid-cols-1 gap-2 text-sm text-slate-700 sm:grid-cols-2">
                 <p>
-                  <span className="font-semibold">Codigo:</span> {code || `${prefijo}-....`}
+                  <span className="font-semibold">Código:</span> {code || `${prefijo}-....`}
                 </p>
                 <p>
                   <span className="font-semibold">Validez:</span> 12 meses
@@ -145,7 +145,7 @@ export default function EcoTaraExitoPage() {
           </div>
         ) : (
           <div className="mt-5 rounded-2xl border border-[#2d5a27]/20 bg-white p-5">
-            <p className="text-xs uppercase tracking-wide text-[#2d5a27]">Codigo de reserva unico</p>
+            <p className="text-xs uppercase tracking-wide text-[#2d5a27]">Código de reserva unico</p>
             <p className="mt-1 font-serif text-3xl font-extrabold tracking-widest text-[#2d5a27]">{code || `${prefijo}-....`}</p>
             <div className="mt-4 grid grid-cols-1 gap-2 text-sm text-slate-700 sm:grid-cols-2">
               <p>
@@ -180,7 +180,7 @@ export default function EcoTaraExitoPage() {
             ) : (
               <div className="h-44 w-44 animate-pulse rounded-xl border border-[#2d5a27]/10 bg-[#fdf6e3]" />
             )}
-            <p className="text-xs text-slate-500">Muestra este QR o el codigo para canjear tu experiencia.</p>
+            <p className="text-xs text-slate-500">Muestra este QR o el código para canjear tu experiencia.</p>
           </div>
         </div>
       </section>
