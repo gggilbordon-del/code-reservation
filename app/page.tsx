@@ -38,6 +38,24 @@ export default function HomePage() {
         >
           Ir a EcoTara Wellness Retreat
         </Link>
+        <Link
+          href="/actividades/elsalobrehorse"
+          className="rounded-md bg-amber-700 px-4 py-2 text-center text-white hover:bg-amber-800"
+        >
+          Ir a El Salobre Horse Riding
+        </Link>
+        <Link
+          href="/actividades/vivacaventura"
+          className="rounded-md bg-orange-600 px-4 py-2 text-center text-white hover:bg-orange-700"
+        >
+          Ir a Vivac Aventura
+        </Link>
+        <Link
+          href="/actividades/mondragon-dream"
+          className="rounded-md bg-slate-800 px-4 py-2 text-center text-white hover:bg-black"
+        >
+          Ir a Mondragon&apos;s Dream
+        </Link>
       </section>
     </main>
   );
