@@ -29,7 +29,7 @@ const CONFIG_EMPRESA: EmpresaConfig = {
   etiqueta: "AquaSports Collection",
   claim: "Bonos deportivos de alta conversion",
   descripcion: "Flujo rapido de venta directa con QR y ticket digital.",
-  servicioEstrella: "Safari en Moto de Agua (60 min).",
+  servicioEstrella: "Magic Island - Yate Privado De Lujo 1-12 Pax (3-5h).",
   prefijoCodigo: "AQUA",
   precioBono: 120,
   validezMeses: 12,
