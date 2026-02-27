@@ -149,7 +149,7 @@ export function BookingAquaSportsVoucher() {
         <div className="relative h-52 w-full overflow-hidden rounded-3xl border border-[#0070f3]/40 shadow-2xl sm:h-64">
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?auto=format&fit=crop&w=1400&q=80')" }}
+            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1692823206447-f2e63efe84b0?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#003a80]/85 via-[#005ed1]/30 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 p-5 text-white">
@@ -180,7 +180,7 @@ export function BookingAquaSportsVoucher() {
               <p className="text-xs font-semibold uppercase tracking-wide text-[#0070f3]">Servicio estrella</p>
               <p className="mt-1 text-lg font-semibold text-[#0049a8]">{CONFIG_EMPRESA.servicioEstrella}</p>
               <p className="mt-2 text-sm text-slate-600">
-                Bono valido por {CONFIG_EMPRESA.validezMeses} meses. Recibiras codigo y QR para canjear cuando quieras.
+                Bono valido por {CONFIG_EMPRESA.validezMeses} meses. Recibirás el código y el QR para canjear cuando quieras.
               </p>
               <p className="mt-1 text-sm text-slate-700">
                 Contacto canje: <span className="font-semibold">{CONFIG_EMPRESA.telefonoReserva}</span>
@@ -213,7 +213,7 @@ export function BookingAquaSportsVoucher() {
                   <Ticket className="h-4 w-4" />
                   <p className="font-semibold">Ticket abierto</p>
                 </div>
-                <p className="mt-1 text-sm text-slate-600">Compra ahora y reserva el mejor momento despues.</p>
+                <p className="mt-1 text-sm text-slate-600">Compra ahora y reserva el mejor momento después.</p>
               </button>
             </div>
 

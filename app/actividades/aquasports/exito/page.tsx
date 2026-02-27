@@ -104,7 +104,7 @@ export default function AquaSportsExitoPage() {
           <p className="text-sm font-semibold uppercase tracking-wide">{simulated ? "Pago simulado OK" : "Pago confirmado"}</p>
         </div>
 
-        <h1 className="mt-2 text-2xl font-bold text-slate-900">Tu ticket de AquaSports Gran Canaria esta listo</h1>
+        <h1 className="mt-2 text-2xl font-bold text-slate-900">Tu ticket de AquaSports Gran Canaria está listo</h1>
         <p className="mt-1 text-sm text-slate-600">PDF profesional con QR de canje listo para compartir.</p>
 
         {isGift ? (
@@ -132,7 +132,7 @@ export default function AquaSportsExitoPage() {
               {mensaje ? <p className="mt-2 rounded-xl bg-blue-50 p-3 text-sm text-slate-700">&quot;{mensaje}&quot;</p> : null}
               <div className="mt-3 grid grid-cols-1 gap-2 text-sm text-slate-700 sm:grid-cols-2">
                 <p>
-                  <span className="font-semibold">Codigo:</span> {code || `${prefijo}-....`}
+                  <span className="font-semibold">Código:</span> {code || `${prefijo}-....`}
                 </p>
                 <p>
                   <span className="font-semibold">Validez:</span> 12 meses
@@ -145,7 +145,7 @@ export default function AquaSportsExitoPage() {
           </div>
         ) : (
           <div className="mt-5 rounded-2xl border border-blue-200 bg-blue-50 p-5">
-            <p className="text-xs uppercase tracking-wide text-[#0070f3]">Codigo de reserva unico</p>
+            <p className="text-xs uppercase tracking-wide text-[#0070f3]">Código de reserva único</p>
             <p className="mt-1 text-3xl font-extrabold tracking-widest text-[#0049a8]">{code || `${prefijo}-....`}</p>
             <div className="mt-4 grid grid-cols-1 gap-2 text-sm text-slate-700 sm:grid-cols-2">
               <p>
@@ -180,7 +180,7 @@ export default function AquaSportsExitoPage() {
             ) : (
               <div className="h-44 w-44 animate-pulse rounded-xl border border-blue-100 bg-blue-50" />
             )}
-            <p className="text-xs text-slate-500">Muestra este QR o el codigo en recepcion para canjear.</p>
+            <p className="text-xs text-slate-500">Muestra este QR o el código en recepción para canjear.</p>
           </div>
         </div>
       </section>
